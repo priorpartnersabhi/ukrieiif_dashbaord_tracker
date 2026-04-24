@@ -171,9 +171,14 @@
   }
 
   function rowHtml(row) {
-    const sourceCell = row.data_source_url
-      ? `<a href="${escapeAttr(row.data_source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(truncate(row.data_source_url, 50))}</a>`
-      : `<span class="subtle">—</span>`;
+    let sourceCell;
+    if (!row.data_source_url) {
+      sourceCell = `<span class="subtle">—</span>`;
+    } else if (isUrl(row.data_source_url)) {
+      sourceCell = `<a href="${escapeAttr(row.data_source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(truncate(row.data_source_url, 50))}</a>`;
+    } else {
+      sourceCell = escapeHtml(row.data_source_url);
+    }
 
     const voteCount = votesFor(row.id).length;
     const voted = userHasVoted(row.id);
@@ -382,6 +387,7 @@
   }
   function escapeAttr(s) { return escapeHtml(s); }
   function truncate(s, n) { return s.length > n ? s.slice(0, n - 1) + "…" : s; }
+  function isUrl(s) { return /^https?:\/\//i.test(String(s).trim()); }
 
   // Boot
   if (!window.SUPABASE_ANON_KEY || window.SUPABASE_ANON_KEY.startsWith("PASTE_")) {

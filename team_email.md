@@ -4,8 +4,8 @@ Hi all,
 
 I've set up a shared tracker for Place+ dashboards so we can collect ideas, see what's in progress, and vote on what to build next.
 
-Link: [PASTE TRACKER URL HERE]
-Password: [PASTE PASSWORD HERE]
+Link: https://priorpartnersabhi.github.io/ukrieiif_dashbaord_tracker/
+Password: placeplus2026
 
 How to use it
 
@@ -18,7 +18,7 @@ Click "+ Add dashboard" in the top right and fill in:
 
 - Dashboard name — what you'd call it
 - Theme — e.g. Health, Housing, Environment
-- Data source — paste the link to the dataset if you know one (I'll replace this with the dashboard link once it's built)
+- Data source — paste the link to the dataset if you have one, or just describe it in words (I'll replace this with the dashboard link once it's built)
 - Notes — a short description of what the dashboard should do / who it's for
 
 Voting
