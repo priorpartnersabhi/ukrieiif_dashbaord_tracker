@@ -169,7 +169,7 @@ button { font: inherit; cursor: pointer; }
 .req { color: var(--danger); }
 
 /* --- Inputs --- */
-input, textarea {
+input, textarea, select {
   font: inherit;
   padding: 11px 14px;
   border: 1px solid var(--border);
@@ -181,12 +181,22 @@ input, textarea {
   transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
   font-family: inherit;
 }
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   border-color: var(--border-strong);
   background: var(--surface);
   box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.06);
 }
 textarea { resize: vertical; min-height: 80px; }
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path fill='none' stroke='%23111' stroke-width='1.5' d='M2 4.5l4 4 4-4'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
 
 /* --- Login view --- */
 #login-view {

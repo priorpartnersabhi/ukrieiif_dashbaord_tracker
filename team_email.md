@@ -17,7 +17,7 @@ Adding a new dashboard idea
 Click "+ Add dashboard" in the top right and fill in:
 
 - Dashboard name — what you'd call it
-- Theme — e.g. Health, Housing, Environment
+- Theme — pick one from the dropdown (People, Place, Housing, Environment, Health, Movement, Infrastructure)
 - Data source — paste the link to the dataset if you have one, or just describe it in words (I'll replace this with the dashboard link once it's built)
 - Notes — a short description of what the dashboard should do / who it's for
 
